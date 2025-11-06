@@ -1,11 +1,10 @@
-import React from 'react';
-import SectionHeading from '../SectionHeading';
-import Spacing from '../Spacing';
-import Button from '../Button';
-import { pageTitle } from '../../helpers/PageTitle';
+import SectionHeading from "../SectionHeading";
+import Spacing from "../Spacing";
+import Button from "../Button";
+import { pageTitle } from "../../helpers/PageTitle";
 
 export default function ErrorPage() {
-  pageTitle('Error');
+  pageTitle("Error");
   return (
     <div className="cs_dark cs_error cs_center text-center">
       <div className="container">

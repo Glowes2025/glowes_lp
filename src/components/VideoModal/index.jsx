@@ -1,18 +1,18 @@
-import React from 'react';
-import { useState } from 'react';
-import WaterWave from 'react-water-wave';
-import Spacing from '../Spacing';
-import parse from 'html-react-parser';
+import React from "react";
+import { useState } from "react";
+import WaterWave from "react-water-wave";
+import Spacing from "../Spacing";
+import parse from "html-react-parser";
 
 export default function VideoModal({ videoSrc, bgUrl, title, titleVariant }) {
-  const [iframeSrc, setIframeSrc] = useState('about:blank');
+  const [iframeSrc, setIframeSrc] = useState("about:blank");
   const [toggle, setToggle] = useState(false);
   const handelClick = () => {
     setIframeSrc(`${videoSrc}`);
     setToggle(!toggle);
   };
   const handelClose = () => {
-    setIframeSrc('about:blank');
+    setIframeSrc("about:blank");
     setToggle(!toggle);
   };
   return (
@@ -21,7 +21,7 @@ export default function VideoModal({ videoSrc, bgUrl, title, titleVariant }) {
         <>
           <h2
             className={`cs_video_block_1_title cs_fs_68 text-center mb-0 ${
-              titleVariant ? titleVariant : 'text-uppercase'
+              titleVariant ? titleVariant : "text-uppercase"
             }`}
           >
             {parse(title)}
@@ -29,7 +29,7 @@ export default function VideoModal({ videoSrc, bgUrl, title, titleVariant }) {
           <Spacing lg="80" md="45" />
         </>
       ) : (
-        ''
+        ""
       )}
       <WaterWave
         className="cs_video_block cs_style_1 cs_bg_filed cs_radius_15 position-relative d-flex justify-content-center align-items-center cs_ripple_activate overflow-hidden"
@@ -54,7 +54,7 @@ export default function VideoModal({ videoSrc, bgUrl, title, titleVariant }) {
         )}
       </WaterWave>
 
-      <div className={toggle ? 'cs_video_popup active' : 'cs_video_popup'}>
+      <div className={toggle ? "cs_video_popup active" : "cs_video_popup"}>
         <div className="cs_video_popup_overlay" />
         <div className="cs_video_popup_content">
           <div className="cs_video_popup_layer" />

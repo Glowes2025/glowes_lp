@@ -1,3 +1,3 @@
-export const pageTitle = title => {
-  return (document.title = title + ' - Creative Agency React App');
+export const pageTitle = (title) => {
+  return (document.title = title + " - Tech");
 };
