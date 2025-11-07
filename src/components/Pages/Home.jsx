@@ -16,6 +16,7 @@ import {
   testimonialData,
   whyChoseFeatureData,
 } from "../../utils/lists";
+import Contact from "../Contact/Contact";
 
 export default function Home() {
   pageTitle("Glowes");
@@ -118,15 +119,10 @@ export default function Home() {
         />
       </section>
 
-      {/* CTA */}
+      {/* CONTATO */}
       <section id="contact">
         <div className="container">
-          <Cta
-            title="Você tem algum projeto ou objetivo específico em mente?"
-            btnText="Entre em contato"
-            btnUrl="#contact"
-            bgUrl="/images/creative-agency/cta_bg.jpeg"
-          />
+          <Contact />
         </div>
       </section>
 
