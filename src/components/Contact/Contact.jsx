@@ -1,7 +1,6 @@
 import Spacing from "../Spacing";
 import SectionHeadingStyle3 from "../SectionHeading/SectionHeadingStyle3";
-import { pageTitle } from "../../helpers/PageTitle";
-import { z } from "zod"; // <- aqui tava "import z", tem que ser { z }
+import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Button from "../Button";
@@ -18,8 +17,6 @@ const formSchema = z.object({
 });
 
 export default function Contact() {
-  pageTitle("Contact");
-
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
