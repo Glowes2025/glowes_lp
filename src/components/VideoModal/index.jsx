@@ -44,7 +44,7 @@ export default function VideoModal({ videoSrc, bgUrl, title, titleVariant }) {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <circle cx={40} cy={40} r={40} fill="#FD6219" />
+              <circle cx={40} cy={40} r={40} fill="#38c2ba" />
               <path
                 d="M60.079 39.9998L30.148 57.4394L30.0104 22.7986L60.079 39.9998Z"
                 fill="white"

@@ -306,8 +306,8 @@ hr {
     position: relative;
     &:after {
       position: absolute;
-      content: '\f061';
-      font-family: 'Font Awesome 6 Free';
+      content: "\f061";
+      font-family: "Font Awesome 6 Free";
       font-weight: 900;
       left: -19px;
       bottom: -25px;
@@ -376,7 +376,7 @@ hr {
     display: inline-block;
     position: relative;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       height: 2px;
       width: 100%;
@@ -439,7 +439,7 @@ hr {
       margin-right: 21px;
       padding-right: 21px;
       &::after {
-        content: '';
+        content: "";
         height: 22px;
         width: 2px;
         background-color: $gray2;
@@ -498,10 +498,10 @@ hr {
 }
 .cs_img_card.cs_style_1 {
   &:after {
-    content: '';
+    content: "";
     width: calc(100% - 15px);
     height: calc(100% - 20px);
-    background-color: #fd6219;
+    background-color: $accent;
     border-radius: 15px;
     position: absolute;
     left: -32px;
@@ -635,7 +635,7 @@ hr {
   border: 2px solid $primary;
   &::before,
   &::after {
-    content: '';
+    content: "";
     height: 2px;
     width: 60%;
     position: absolute;
@@ -969,7 +969,7 @@ hr {
       height: 400px;
     }
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: -80%;
@@ -1148,7 +1148,7 @@ hr {
     border-radius: inherit;
     position: relative;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       right: -9px;
       height: 18px;
@@ -1160,7 +1160,7 @@ hr {
       background-color: #fff;
     }
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       right: -4px;
       background-color: $accent;
@@ -1186,16 +1186,16 @@ hr {
     .cs_section_subtitle {
       display: inline-block;
       &::before {
-        content: '\f104';
-        font-family: 'Font Awesome 6 Free';
+        content: "\f104";
+        font-family: "Font Awesome 6 Free";
         font-weight: 900;
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
         margin-right: 12px;
       }
       &::after {
-        content: '\f105';
-        font-family: 'Font Awesome 6 Free';
+        content: "\f105";
+        font-family: "Font Awesome 6 Free";
         font-weight: 900;
         -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
@@ -1227,7 +1227,7 @@ hr {
       align-items: center;
       gap: 20px;
       &::before {
-        content: '';
+        content: "";
         display: inline-block;
         height: 1px;
         width: 50px;
@@ -1313,7 +1313,7 @@ hr {
   align-items: flex-end;
   position: relative;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     height: 100%;
     width: 100%;
@@ -1364,7 +1364,7 @@ hr {
     position: relative;
     &:not(:last-child) {
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         width: 60px;
         top: 50%;
@@ -1518,7 +1518,7 @@ hr {
   text-align: center;
   position: relative;
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     height: calc(100% + 3px);
     width: calc(100% + 3px);
@@ -1712,7 +1712,7 @@ hr {
       margin-right: 13px;
       padding-right: 13px;
       &::before {
-        content: '';
+        content: "";
         height: 15px;
         width: 1px;
         border-radius: 2px;
@@ -1753,7 +1753,7 @@ hr {
       margin-top: 15px;
       padding-left: 35px;
       &::before {
-        content: '';
+        content: "";
         height: 2px;
         width: 20px;
         border-radius: 2px;

@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import VideoModal from '../VideoModal';
-import TextTransition, { presets } from 'react-text-transition';
+import React, { useEffect, useState } from "react";
+import VideoModal from "../VideoModal";
+import TextTransition, { presets } from "react-text-transition";
 
 export default function Hero({ title, subtitle, videoSrc, bgUrl }) {
   const [index, setIndex] = useState(0);
   useEffect(() => {
     const intervalId = setInterval(
-      () => setIndex(prevIndex => prevIndex + 1),
-      3000, // every 3 seconds
+      () => setIndex((prevIndex) => prevIndex + 1),
+      3000 // every 3 seconds
     );
 
     return () => clearInterval(intervalId); // Use clearInterval here
