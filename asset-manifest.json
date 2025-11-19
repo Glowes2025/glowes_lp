@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/glowes_lp/static/css/main.298a5279.css",
+    "main.js": "/glowes_lp/static/js/main.7c6f2e46.js",
+    "index.html": "/glowes_lp/index.html",
+    "main.298a5279.css.map": "/glowes_lp/static/css/main.298a5279.css.map",
+    "main.7c6f2e46.js.map": "/glowes_lp/static/js/main.7c6f2e46.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.298a5279.css",
+    "static/js/main.7c6f2e46.js"
+  ]
+}
