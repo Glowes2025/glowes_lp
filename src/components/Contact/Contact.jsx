@@ -4,31 +4,67 @@ import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Button from "../Button";
+import { useState } from "react";
+import { enviarEmail } from "../../actions/email";
 
 const formSchema = z.object({
-  name: z.string().min(2, {
+  nome: z.string().min(2, {
     message: "O nome deve possuir no mínimo dois caracteres.",
   }),
   email: z.string().email({
     message: "Digite um e-mail válido.",
   }),
-  phone: z.string().optional(),
-  comments: z.string().optional(),
+  telefone: z.string().optional(),
+  mensagem: z.string().optional(),
 });
 
 export default function Contact() {
+  const [loading, setLoading] = useState();
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
+      nome: "",
       email: "",
-      phone: "",
-      comments: "",
+      telefone: "",
+      mensagem: "",
     },
   });
 
-  const onSubmit = (data) => {
-    console.log("Formulário enviado:", data);
+  const formatTelefone = (value) => {
+    if (!value) return "";
+    const digits = value.replace(/\D/g, "").slice(0, 11);
+
+    // 11 dígitos = celular
+    if (digits.length === 11) {
+      return digits.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
+    }
+
+    // 10 dígitos = fixo
+    if (digits.length === 10) {
+      return digits.replace(/(\d{2})(\d{4})(\d{4})/, "($1) $2-$3");
+    }
+
+    if (digits.length <= 2) {
+      return digits.replace(/(\d{0,2})/, "($1");
+    }
+
+    if (digits.length <= 6) {
+      return digits.replace(/(\d{2})(\d{0,4})/, "($1) $2");
+    }
+
+    return digits.replace(/(\d{2})(\d{4})(\d{0,4})/, "($1) $2-$3");
+  };
+
+  const onSubmit = async (data) => {
+    setLoading(true);
+    let res = null;
+    try {
+      res = await enviarEmail(data);
+    } catch (error) {
+      console.error(error);
+    }
+    setLoading(false);
+    return res;
   };
 
   return (
@@ -75,14 +111,14 @@ export default function Contact() {
                     Nome completo
                   </label>
                   <input
-                    {...form.register("name")}
+                    {...form.register("nome")}
                     placeholder="Digite o seu nome completo"
                     type="text"
                     className="cs_form_field"
                   />
-                  {form.formState.errors.name && (
+                  {form.formState.errors.nome && (
                     <p style={{ color: "red" }}>
-                      {form.formState.errors.name.message}
+                      {form.formState.errors.nome.message}
                     </p>
                   )}
 
@@ -109,26 +145,30 @@ export default function Contact() {
                     Número de telefone
                   </label>
                   <input
-                    {...form.register("phone")}
+                    {...form.register("telefone")}
                     placeholder="Digite o número de seu telefone"
                     type="text"
                     className="cs_form_field"
+                    onChange={(e) =>
+                      form.setValue("telefone", formatTelefone(e.target.value))
+                    }
                   />
 
                   <div className="cs_height_38 cs_height_lg_25" />
 
                   <label className="cs_fs_21 cs_semibold cs_primary_color">
-                    Comentários
+                    Mensagem
                   </label>
                   <textarea
-                    {...form.register("comments")}
+                    {...form.register("mensagem")}
                     cols={30}
                     rows={5}
                     className="cs_form_field"
+                    placeholder="Fale um pouco sobre a sua ideia..."
                   />
 
                   <div className="cs_height_38 cs_height_lg_25" />
-                  <Button btnText="Enviar" type="submit" />
+                  <Button disabled={loading} btnText="Enviar" type="submit" />
                 </form>
               </div>
             </div>

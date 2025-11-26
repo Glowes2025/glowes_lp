@@ -8,6 +8,7 @@ export default function Button({
   variantColor,
   onClick,
   type,
+  disabled,
 }) {
   return (
     <>
@@ -30,7 +31,9 @@ export default function Button({
         <button
           type={type}
           onClick={onClick}
-          className={`cs_btn cs_style_1 ${variantColor ? variantColor : ""}`}
+          className={`cs_btn cs_style_1 ${variantColor ? variantColor : ""} ${
+            disabled ? "btn-disabled" : ""
+          }`}
         >
           {btnText}
           <span>

@@ -3,6 +3,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./components/Pages/Home";
 import Layout2 from "./components/Layout/Layout2";
 import ErrorPage from "./components/Pages/ErrorPage";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const { pathname } = useLocation();
@@ -11,12 +12,15 @@ function App() {
     window.scrollTo(0, 0);
   }, [pathname]);
   return (
-    <Routes>
-      <Route path="/" element={<Layout2 darkMode />}>
-        <Route index element={<Home />} />
-      </Route>
-      <Route path="*" element={<ErrorPage />} />
-    </Routes>
+    <>
+      <ToastContainer position="top-right" />
+      <Routes>
+        <Route path="/" element={<Layout2 darkMode />}>
+          <Route index element={<Home />} />
+        </Route>
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </>
   );
 }
 

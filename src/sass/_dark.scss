@@ -1,6 +1,18 @@
 /*--------------------------------------------------------------
   24. Dark Mode
 ----------------------------------------------------------------*/
+
+.btn-disabled {
+  opacity: 0.6;
+  cursor: not-allowed !important;
+  pointer-events: none;
+  filter: grayscale(40%);
+}
+
+.btn-disabled span i {
+  opacity: 0.5;
+}
+
 .cs_dark {
   color: #a3a3a3;
   background-color: #171717;
