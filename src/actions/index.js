@@ -1,5 +1,4 @@
 import { toast } from "react-toastify";
-import { config } from "../appsettings";
 
 export class api {
   constructor(url, body) {
@@ -10,11 +9,14 @@ export class api {
   async post() {
     let data = null;
     try {
-      const response = await fetch(`${config.apiUrl}/${this.url}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(this.body),
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_API_URL}/${this.url}`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(this.body),
+        }
+      );
 
       data = await response.json();
       console.log("res", response);
