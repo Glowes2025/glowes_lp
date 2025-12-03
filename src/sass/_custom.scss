@@ -10,8 +10,8 @@
     i {
       &:last-child {
         position: absolute;
-        content: '\f061';
-        font-family: 'Font Awesome 6 Free';
+        content: "\f061";
+        font-family: "Font Awesome 6 Free";
         font-weight: 900;
         left: -20px;
         bottom: -19px;
@@ -286,7 +286,7 @@
       position: relative;
       cursor: pointer;
       &::before {
-        content: '';
+        content: "";
         height: 24px;
         width: 50px;
         position: absolute;
@@ -317,7 +317,7 @@
   .cs_section_subtitle {
     &:before,
     &:after {
-      content: '';
+      content: "";
       height: 10px;
       width: 10px;
       display: inline-block;
@@ -437,7 +437,7 @@
     padding-left: 22px;
     cursor: pointer;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       height: 14px;
       width: 14px;
@@ -448,7 +448,7 @@
       transition: all 0.3s ease;
     }
     &::after {
-      content: '';
+      content: "";
       height: 8px;
       width: 5px;
       border: 2px solid #fff;
@@ -523,7 +523,7 @@
         padding-right: 22px;
         &::before,
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           height: 8px;
           width: 8px;
@@ -542,10 +542,12 @@
     }
   }
 }
+
 .cs_hero.cs_style_1 {
   .text-transition {
     justify-content: center;
   }
+  height: 700px;
 }
 
 *:not(.cs_dark) {

@@ -18,11 +18,7 @@ export default function Service({ data }) {
             <>
               <div className="cs_image_layer cs_style1 cs_size_md">
                 <div className="cs_image_layer_in">
-                  <img
-                    src={item.imgUrl}
-                    alt="Thumb"
-                    className="w-100 cs_radius_15"
-                  />
+                  <img src={item.imgUrl} alt="Thumb" className="w-100 " />
                 </div>
               </div>
 

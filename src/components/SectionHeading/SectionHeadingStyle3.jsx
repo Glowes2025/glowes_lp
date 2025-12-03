@@ -1,7 +1,7 @@
-import React from 'react';
-import parse from 'html-react-parser';
-import Spacing from '../Spacing';
-import { Link } from 'react-router-dom';
+import React from "react";
+import parse from "html-react-parser";
+import Spacing from "../Spacing";
+import { Link } from "react-router-dom";
 
 export default function SectionHeadingStyle3({
   title,
@@ -10,14 +10,13 @@ export default function SectionHeadingStyle3({
   date,
   avatar,
   avatarLink,
-  shape,
   category,
   href,
 }) {
   return (
     <div
       className={`cs_section_heading cs_style_1 cs_type_3 ${
-        variant ? variant : ''
+        variant ? variant : ""
       }`}
     >
       <div className="container">
@@ -38,24 +37,6 @@ export default function SectionHeadingStyle3({
           </div>
         )}
       </div>
-      {shape === 'shape_1' && <div className="cs_shape_1" />}
-      {shape === 'shape_2' && <div className="cs_shape_2" />}
-      {shape === 'shape_3' && <div className="cs_shape_3" />}
-      {shape === 'shape_4' && (
-        <div className="cs_shape_4">
-          <img src="/images/icons/team_shape.svg" alt="Shape" />
-        </div>
-      )}
-      {shape === 'shape_5' && (
-        <div className="cs_shape_5">
-          <img src="/images/icons/blog.svg" alt="Icon" />
-        </div>
-      )}
-      {shape === 'shape_6' && (
-        <div className="cs_shape_4">
-          <img src="/images/icons/mail.svg" alt="Mail" />
-        </div>
-      )}
     </div>
   );
 }

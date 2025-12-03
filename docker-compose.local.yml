@@ -1,17 +1,17 @@
 version: "3.9"
 services:
   glowesweb:
-    image: glowesweb
+    build: ./web/
     env_file:
-      - ./web/.env.development
-    ports:
-      - "3004:3000"
+      - ./web/.env
+    expose:
+      - "80"
     depends_on:
       - glowesapi
 
   glowesapi:
-    image: glowesapi
+    build: ./api/
     environment:
       - ASPNETCORE_URLS=http://0.0.0.0:80
-    ports:
-      - "7075:80"
+    expose:
+      - "80"

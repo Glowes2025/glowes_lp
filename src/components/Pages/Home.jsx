@@ -6,7 +6,6 @@ import Service from "../Service";
 import Portfolio from "../Portfolio";
 import SectionHeading from "../SectionHeading";
 import Accordion from "../Accordion";
-import Cta from "../Cta";
 import TestimonialSlider from "../Slider/TestimonialSlider";
 import { pageTitle } from "../../helpers/PageTitle";
 import {
@@ -36,9 +35,6 @@ export default function Home() {
           bgUrl="/images/creative-agency/hero_video_bg_1.jpeg"
         />
       </section>
-
-      <Spacing lg="125" md="70" />
-
       {/* SOBRE */}
       <section id="about">
         <Spacing lg="125" md="70" />
@@ -89,43 +85,30 @@ export default function Home() {
           <Spacing lg="135" md="65" />
         </div>
       </section>
-
       {/* PORTFÓLIO */}
       <section id="portfolio">
         <Spacing lg="143" md="75" />
         <div className="container">
           <SectionHeading
             title="Alguns dos nossos trabalhos"
-            subTitle="Portfolio"
+            subTitle="Portfólio"
           />
           <Spacing lg="85" md="45" />
           <Portfolio data={portfolioData} />
         </div>
         <Spacing lg="150" md="80" />
       </section>
-
       {/* DEPOIMENTOS */}
       <section id="testimonial" className="cs_primary_bg cs_shape_animation_2">
         <Spacing lg="143" md="75" />
-        <TestimonialSlider
-          layeredImages={[
-            "/images/creative-agency/layer_img_1.jpeg",
-            "/images/creative-agency/layer_img_2.jpeg",
-            "/images/creative-agency/layer_img_3.jpeg",
-            "/images/creative-agency/layer_img_4.jpeg",
-            "/images/creative-agency/layer_img_5.jpeg",
-          ]}
-          data={testimonialData}
-        />
+        <TestimonialSlider data={testimonialData} />
       </section>
-
       {/* CONTATO */}
       <section id="contact">
         <div className="container">
           <Contact />
         </div>
       </section>
-
       {/* FAQ */}
       <section id="faq">
         <Spacing lg="143" md="75" />

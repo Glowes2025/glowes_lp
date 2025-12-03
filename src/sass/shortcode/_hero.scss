@@ -36,7 +36,7 @@
 
   .cs_video_block_wrap {
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       height: 50%;
       width: 100%;
@@ -51,12 +51,25 @@
   .cs_hero_shape {
     left: -100px;
     top: -9px;
-    animation: heroShapeAnim 20s linear infinite alternate;
+    animation: floatRocket 3s ease-in-out infinite;
   }
   .cs_hero_text {
     z-index: 2;
   }
 }
+
+@keyframes floatRocket {
+  0% {
+    transform: rotate(-20deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(-20deg) translateY(-12px);
+  }
+  100% {
+    transform: rotate(-20deg) translateY(0px);
+  }
+}
+
 @keyframes heroShapeAnim {
   0% {
     transform: rotate(0deg);
@@ -90,7 +103,7 @@
   padding: 186px 0 100px;
   position: relative;
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     height: 440px;
     width: 440px;
@@ -154,7 +167,7 @@
     align-items: center;
     justify-content: flex-end;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       height: 1px;
       background-color: currentColor;
@@ -506,7 +519,7 @@
     margin-right: auto;
     margin-top: 10%;
     &:before {
-      content: '';
+      content: "";
       height: 5px;
       width: 5px;
       border-radius: 50%;
@@ -525,7 +538,7 @@
     padding-bottom: 10px;
     &::before,
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       height: 8px;
       width: 8px;

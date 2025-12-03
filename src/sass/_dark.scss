@@ -143,9 +143,14 @@
   .cs_primary_bg,
   .cs_primary_bg_hover:hover,
   .cs_gescout_sticky,
-  .cs_site_header.cs_style_1.cs_color_1.cs_gescout_show,
   .cs_nav .cs_nav_list > li > ul::before {
     background-color: #000;
+  }
+  .cs_site_header.cs_style_1.cs_color_1.cs_gescout_show {
+    background: rgba(255, 255, 255, 0.06); /* Transparência */
+    backdrop-filter: blur(12px); /* BLUR do vidro */
+    -webkit-backdrop-filter: blur(12px); /* Safari */
+    border: 1px solid rgba(255, 255, 255, 0.12); /* contorno leve */
   }
   @media (max-width: 1199px) {
     .cs_nav .cs_nav_list ul {

@@ -85,7 +85,7 @@
     flex-direction: column;
   }
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: -55px;
     top: -55px;
@@ -252,9 +252,8 @@
   }
   .cs_image_layer_in {
     position: relative;
-    border-radius: 15px;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       height: 100%;
       width: 100%;

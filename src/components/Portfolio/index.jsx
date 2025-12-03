@@ -1,6 +1,6 @@
-import React from 'react';
-import Masonry from 'react-masonry-css';
-import { Link } from 'react-router-dom';
+import React from "react";
+import Masonry from "react-masonry-css";
+import { Link } from "react-router-dom";
 
 export default function Portfolio({ data }) {
   const breakpoints = {
@@ -18,7 +18,7 @@ export default function Portfolio({ data }) {
         {data.map((item, index) => (
           <div key={index} className="masonry-item">
             <div className="cs_portfolio cs_style_1">
-              <Link to={item.href} className="cs_portfolio_thumb cs_radius_15">
+              <Link to={item.href} className="cs_portfolio_thumb">
                 <img src={item.imgUrl} alt="Portfolio" />
               </Link>
               <div className="cs_portfolio_info">

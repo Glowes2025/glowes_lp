@@ -290,7 +290,6 @@ hr {
 .cs_btn.cs_style_1 {
   color: $primary;
   border: 2px solid $accent;
-  border-radius: 15px;
   font-weight: 500;
   padding: 10px 20px;
   line-height: 1.625em;
@@ -496,44 +495,7 @@ hr {
     padding: 5px;
   }
 }
-.cs_img_card.cs_style_1 {
-  &:after {
-    content: "";
-    width: calc(100% - 15px);
-    height: calc(100% - 20px);
-    background-color: $accent;
-    border-radius: 15px;
-    position: absolute;
-    left: -32px;
-    bottom: -15px;
-    transform: rotate(-4.6deg);
-    transition: all 0.5s ease-in-out;
-    z-index: -1;
-    @media (max-width: 1060px) {
-      left: -7px;
-      bottom: 10px;
-      transform: rotate(-1.5deg);
-    }
-  }
-  img {
-    width: 100%;
-    border-radius: 15px;
-    transition: all 0.5s ease-in-out;
-  }
-  &:hover {
-    &::after {
-      left: 16px;
-      bottom: 9px;
-      transform: rotate(0deg);
-    }
-    img {
-      transform: rotate(-4.6deg);
-      @media (max-width: 1060px) {
-        transform: rotate(-2deg);
-      }
-    }
-  }
-}
+
 .cs_img_card.cs_style_2 {
   height: 650px;
   width: 50vw;
@@ -617,7 +579,6 @@ hr {
 }
 .cs_accordian {
   border: 1px solid $border;
-  border-radius: 15px;
   &:not(:last-child) {
     margin-bottom: 20px;
   }

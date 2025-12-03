@@ -1,93 +1,11 @@
-import React from 'react';
-import Testimonial from '../Testimonial';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import Testimonial from "../Testimonial";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
 
-export default function TestimonialSlider({ layeredImages, data }) {
+export default function TestimonialSlider({ data }) {
   return (
     <div>
-      <div className="cs_height_150 cs_height_lg_80" />
       <div className="cs_testimonial_1_wrap cs_parallax">
-        <div className="cs_height_100 cs_height_lg_80" />
-        <div className="cs_layered_shape_1 position-absolute">
-          <svg
-            width={48}
-            height={55}
-            viewBox="0 0 48 55"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              opacity="0.2"
-              d="M1.12432 0.00707413L47.9971 27.93L0.378738 54.5616L1.12432 0.00707413Z"
-              fill="#B7B7B7"
-            />
-          </svg>
-        </div>
-        <div className="cs_layered_shape_2 position-absolute">
-          <svg
-            width={89}
-            height={83}
-            viewBox="0 0 89 83"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              opacity="0.2"
-              cx={33}
-              cy={33}
-              r={28}
-              stroke="#B7B7B7"
-              strokeWidth={10}
-            />
-            <circle
-              opacity="0.15"
-              cx={56}
-              cy={50}
-              r={28}
-              stroke="#B7B7B7"
-              strokeWidth={10}
-            />
-          </svg>
-        </div>
-        <div className="cs_layered_shape_3 position-absolute">
-          <svg
-            width={140}
-            height={103}
-            viewBox="0 0 140 103"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect
-              opacity="0.25"
-              x="6.84847"
-              y="38.2329"
-              width="59.8743"
-              height="59.8743"
-              transform="rotate(-30.5854 6.84847 38.2329)"
-              stroke="#DDDDDD"
-              strokeWidth={10}
-            />
-            <rect
-              opacity="0.25"
-              x="50.8485"
-              y="44.314"
-              width="59.8743"
-              height="59.8743"
-              transform="rotate(-30.5854 50.8485 44.314)"
-              stroke="#DDDDDD"
-              strokeWidth={10}
-            />
-          </svg>
-        </div>
-        {layeredImages.map((item, index) => (
-          <div
-            key={index}
-            className={`position-absolute cs_layered_img_${index + 1}`}
-          >
-            <img src={item} alt="Thumb" />
-          </div>
-        ))}
         <div className="container">
           <div className="row">
             <div className="col-lg-8 offset-lg-2">
@@ -97,8 +15,8 @@ export default function TestimonialSlider({ layeredImages, data }) {
                 speed={1000}
                 modules={[Navigation]}
                 navigation={{
-                  nextEl: '.cs_swiper_next',
-                  prevEl: '.cs_swiper_prev',
+                  nextEl: ".cs_swiper_next",
+                  prevEl: ".cs_swiper_prev",
                 }}
               >
                 {data?.map((item, index) => (
